@@ -6,7 +6,7 @@ El objetivo principal de este laboratorio fue practicar técnicas de reconocimie
 
 ---
 
-![nmap](DockerLabs/Wargame/IMAGES/Wargame%20-%20nmap1.png)
+![nmap](IMAGES/Wargame%20-%20nmap1.png)
 
 ![[Wargame - nmap1.png]]
 We start with a fast nmap scan to discover open ports.
