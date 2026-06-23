@@ -60,9 +60,11 @@ We check if Joshua is part of the SUDO group and it seems not.
 Then, we will try and find the files with SUID enabled, we find a particular interesting file, **/usr/local/bin/godmode**, let's inspect it with the *strings* command.
 
 ![](IMAGES/Wargame%20-%20stringsGodmode.png)
+
 We found what looks like an argument, followed by /bin/bash. This might indicate the existence of a hidden argument that could open a bash shell.
 
 ![](IMAGES/Wargame%20-%20privEsc.png)
+
 We tried and we gain root access to the machine.
 
 Because the godmode binary has SUID enable and root is its owner, we execute the bash shell as root.
