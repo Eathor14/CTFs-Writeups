@@ -22,8 +22,8 @@ Ports discovered:
 | 22/SSH   | OpenSSH 10.0p2      |
 | 80/HTTP  | Apache httpd 2.4.65 |
 
-![[Wargame - webView.png]]
+![](IMAGES/Wargame%20-%20webView.png)
 If we take a quick peek to the web that's hosted, we see we can't gather much info here.
 
-![[Wargame - gobuster.png]]
+![](IMAGES/Wargame%20-%20GoBuster.png)
 We run a gobuster
