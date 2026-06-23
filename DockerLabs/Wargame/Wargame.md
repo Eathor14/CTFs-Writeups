@@ -6,12 +6,10 @@ El objetivo principal de este laboratorio fue practicar técnicas de reconocimie
 
 ---
 
-![nmap](IMAGES/Wargame%20-%20nmap1.png)
-
-![[Wargame - nmap1.png]]
+![nmap](IMAGES/Wargame%20-%20nmap.png)
 We start with a fast nmap scan to discover open ports.
 
-![[Wargame - nmap2.png]]
+![](IMAGES/Wargame%20-%20nmap2.png)
 Then, we continue with a deeper script and version scan to enumerate more info about the open ports.
 
 Ports discovered:
