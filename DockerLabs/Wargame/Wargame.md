@@ -6,6 +6,8 @@ El objetivo principal de este laboratorio fue practicar técnicas de reconocimie
 
 ---
 
+![nmap](DockerLabs/Wargame/IMAGES/Wargame%20-%20nmap1.png)
+
 ![[Wargame - nmap1.png]]
 We start with a fast nmap scan to discover open ports.
 
@@ -23,5 +25,5 @@ Ports discovered:
 ![[Wargame - webView.png]]
 If we take a quick peek to the web that's hosted, we see we can't gather much info here.
 
-![Wargame - gobuster.png]
+![[Wargame - gobuster.png]]
 We run a gobuster
