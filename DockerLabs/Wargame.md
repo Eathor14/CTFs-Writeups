@@ -23,5 +23,5 @@ Ports discovered:
 ![[Wargame - webView.png]]
 If we take a quick peek to the web that's hosted, we see we can't gather much info here.
 
-![[Wargame - gobuster.png]]
+![Wargame - gobuster.png]
 We run a gobuster
