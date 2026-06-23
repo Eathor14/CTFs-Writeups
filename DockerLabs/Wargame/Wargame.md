@@ -26,4 +26,7 @@ Ports discovered:
 If we take a quick peek to the web that's hosted, we see we can't gather much info here.
 
 ![](IMAGES/Wargame%20-%20GoBuster.png)
-We run a gobuster
+We run gobuster in order to enumerate the hidden and accesible files of the web server. We found one **README.txt**, let's take a look.
+
+![](IMAGES/Wargame%20-%20README.txt.png)
+We take a look at the file
