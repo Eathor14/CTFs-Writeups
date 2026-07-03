@@ -55,4 +55,31 @@ We discover that the user *pedro* is the one with the password *purpl3*.
 ![](IMAGES/Internship%20-%20sshLogon.png)
 Now we have gained access to the target machine.
 
+We see if pedro is part of the sudo group but it seems not.
+![](IMAGES/Internship%20-%20writeableFile.png)
+Then, we look for files we can write on and we find one pretty interesting, **/opt/log_cleaner.sh.**
 
+![](IMAGES/Internship%20-%20reverseshell1.png)
+
+We edit the script to generate a reverse shell to our machine and we set up a netcat listener.
+
+![](IMAGES/Internship%20-%20revershell2.png)
+By exiting the ssh and re-entering, we launch the script and we gain a reverse shell to Valentina's account.
+
+![](IMAGES/Internship%20-%20profilepicture.png)
+![](IMAGES/Internship%20-%20cpprofilepicture.png)
+Let's take a look at the .jpeg, so we copy it to /tmp and change it's permissions to 777, then, we copy it to our machine.
+
+![](IMAGES/Internship%20-%20steghide.png)
+We then use steghide to extract the secret files that may be inside the image. It ask us for a password, we simply press enter.
+
+Inside the **secret.txt** we have found, we find a word **mag1ck**.
+
+![](IMAGES/Internship%20-%20sshValentina.png)
+We try to use it at Valentina's password and we get access. Then, we found that Valentina is indeed, part of the sudo group.
+
+![](IMAGES/Internship%20-%20privesc.png)
+![](IMAGES/Internship%20-%20privesc2.png)
+We simply try to escalate to superuser and we can without a password.
+
+---
