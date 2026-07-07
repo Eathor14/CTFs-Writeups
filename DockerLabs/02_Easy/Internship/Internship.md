@@ -67,13 +67,16 @@ Then, we look for files we can write on and we find one pretty interesting, **/o
 We edit the script to generate a reverse shell to our machine and we set up a netcat listener.
 
 ![](IMAGES/Internship%20-%20revershell2.png)
+
 By exiting the ssh and re-entering, we launch the script and we gain a reverse shell to Valentina's account.
 
 ![](IMAGES/Internship%20-%20profilepicture.png)
 ![](IMAGES/Internship%20-%20cpprofilepicture.png)
+
 Let's take a look at the .jpeg, so we copy it to /tmp and change it's permissions to 777, then, we copy it to our machine.
 
 ![](IMAGES/Internship%20-%20steghide.png)
+
 We then use steghide to extract the secret files that may be inside the image. It ask us for a password, we simply press enter.
 
 Inside the **secret.txt** we have found, we find a word **mag1ck**.
