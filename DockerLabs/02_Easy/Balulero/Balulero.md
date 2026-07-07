@@ -7,3 +7,37 @@ Laboratorio para practicar el análisis del código fuente para obtener credenci
 ---
 
 ![](IMAGES/Balulero%20-%20IMG_01.png)
+
+We start with a simple nmap scan in order to discover the open ports, then, we continue with a deeper scan to enumerate the versión and more useful information.
+
+It seems like the open ports are 22/SSH and 80/HTTP.
+
+![](IMAGES/Balulero%20-%20IMG_02.png)
+
+The page doesn't seem to have any login page so we can discard SQLi.
+
+![](IMAGES/Balulero%20-%20IMG_03.png)
+
+We try to enumerate and fuzz the page in order to discover hidden files and/or directories but we find nothing.
+
+![](IMAGES/Balulero%20-%20IMG_04.png)
+
+We then start analysing the source code, and we find 2 interesting script calls. Let's take a glance at them.
+
+There is nothing useful inside *imagenes.js*, but there is something useful inside **script.js**
+
+![](IMAGES/Balulero%20-%20IMG_05.png)
+
+Reading the code from **script.js** we find a commentary talking about a hidden file called .env that stores the password, a file that it is said to be hidden, but there is also another visible file called **.env_de_baluchingon**.
+
+![](IMAGES/Balulero%20-%20IMG_06.png)
+
+Inspecting the file mentioned, we have discover credentials, let's try them at the SSH login.
+
+![](IMAGES/Balulero%20-%20IMG_07.png)
+
+We now have access at the local machine.
+
+![](IMAGES/Balulero%20-%20IMG_08.png)
+It seems that apart from the root and balu users, there is one more called *chocolate*.
+
