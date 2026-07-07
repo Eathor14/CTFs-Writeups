@@ -79,10 +79,12 @@ We then use steghide to extract the secret files that may be inside the image. I
 Inside the **secret.txt** we have found, we find a word **mag1ck**.
 
 ![](IMAGES/Internship%20-%20sshValentina.png)
+
 We try to use it at Valentina's password and we get access. Then, we found that Valentina is indeed, part of the sudo group.
 
 ![](IMAGES/Internship%20-%20privesc.png)
 ![](IMAGES/Internship%20-%20privesc2.png)
+
 We simply try to escalate to superuser and we can without a password.
 
 ---
