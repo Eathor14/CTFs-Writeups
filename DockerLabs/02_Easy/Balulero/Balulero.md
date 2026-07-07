@@ -6,3 +6,4 @@ Laboratorio para practicar el análisis del código fuente para obtener credenci
 
 ---
 
+![](IMAGES/Balulero%20-%20IMG_01.png)
