@@ -48,9 +48,10 @@ We see that we may run php as the user **Chocolate**, so doing it we can do late
 
 ![](IMAGES/Balulero%20-%20IMG_10.png)
 
-By enumerating the local process, we find one that is interesting. It seems like root is always executing a process, let's take a look at the script in question.
+By enumerating the local process, we find one that is interesting. It seems like root is always executing a script called **/opt/script.php**, let's take a look at the script in question.
 
 ![](IMAGES/Balulero%20-%20IMG_11.png)
+
 The script owner is the user we are logged in, and we can edit it.
 
 ![](IMAGES/Balulero%20-%20IMG_12.png)
