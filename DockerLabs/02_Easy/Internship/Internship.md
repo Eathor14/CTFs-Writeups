@@ -53,10 +53,12 @@ Now, we don't have any more to do at the web page, but the machine also had SSH,
 We discover that the user *pedro* is the one with the password *purpl3*.
 
 ![](IMAGES/Internship%20-%20sshLogon.png)
+
 Now we have gained access to the target machine.
 
 We see if pedro is part of the sudo group but it seems not.
 ![](IMAGES/Internship%20-%20writeableFile.png)
+
 Then, we look for files we can write on and we find one pretty interesting, **/opt/log_cleaner.sh.**
 
 ![](IMAGES/Internship%20-%20reverseshell1.png)
