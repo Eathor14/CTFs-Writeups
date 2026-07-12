@@ -3,7 +3,7 @@
 script /dev/null -c bash
 ```
 
-ctrl Z (Se pondra en pausa la terminal victima)
+ctrl Z (Se pondrá en pausa la terminal victima)
 
 ```shell
 stty raw -echo; fg
