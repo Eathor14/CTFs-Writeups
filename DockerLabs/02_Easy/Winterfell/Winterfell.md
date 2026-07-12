@@ -80,4 +80,4 @@ The script seems to be a reverse shell, but daenerys is the owner and we can mod
 
 We execute the new script and we gain access as the root user.
 
-
+---
