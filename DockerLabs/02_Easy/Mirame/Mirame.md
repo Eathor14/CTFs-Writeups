@@ -29,7 +29,7 @@ We will try to bypass the login page.
 
 ![](IMAGES/Mirame%20-%20IMG_05.png)
 
-By putting as the username **admin' OR 1=1 \==** we successfully do a SQLi attack and bypass the login page.
+By putting as the username **admin' OR 1=1 ##** we successfully do a SQLi attack and bypass the login page.
 
 ![](IMAGES/Mirame%20-%20IMG_06.png)
 ![](IMAGES/Mirame%20-%20IMG_07.png)
